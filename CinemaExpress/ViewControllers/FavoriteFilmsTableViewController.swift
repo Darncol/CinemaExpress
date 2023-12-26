@@ -24,13 +24,13 @@ final class FavoriteFilmsTableViewController: UITableViewController {
             object: nil
         )
     }
-        
+    
     func movieInfoCellButtonTapped(cell: MovieInfoCell) {
-           guard let indexPath = tableView.indexPath(for: cell) else { return }
-           let movie = moviesDownloaded[indexPath.row]
-           // Логика обработки нажатия кнопки
-           print("Кнопка нажата для фильма: \(movie.name)")
-       }
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        let movie = moviesDownloaded[indexPath.row]
+        // Логика обработки нажатия кнопки
+        print("Кнопка нажата для фильма: \(movie.name)")
+    }
     
     // MARK: - Table view data source
     
@@ -46,6 +46,16 @@ final class FavoriteFilmsTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinaion = segue.destination as? FilePreviewViewController,
+              let indexPath = sender as? IndexPath else { return }
+        destinaion.movie = moviesDownloaded[indexPath.row]
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showFilmInfo", sender: indexPath)
+    }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 142
     }
@@ -58,7 +68,7 @@ final class FavoriteFilmsTableViewController: UITableViewController {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
-
+    
 }
 
 

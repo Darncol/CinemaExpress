@@ -47,6 +47,7 @@ final class SearchTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        view.endEditing(true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
@@ -60,5 +61,6 @@ extension SearchTableViewController: UISearchBarDelegate {
                 self?.tableView.reloadData()
             }
         }
+        searchBar.resignFirstResponder()
     }
 }
