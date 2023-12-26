@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ImageManager {
+final class ImageManager {
     
     static let shared = ImageManager()
     
@@ -35,6 +35,14 @@ class ImageManager {
         } catch {
             print("Ошибка загрузки изображения: \(error)")
             return nil
+        }
+    }
+    
+    func deleteImageFromFileSystem(url: URL) {
+        do {
+            try FileManager.default.removeItem(at: url)
+        } catch {
+            print("Ошибка удаления файла: \(error)")
         }
     }
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MovieInfoCell: UITableViewCell {
+final class MovieInfoCell: UITableViewCell {
     let movieImageView = UIImageView()
     let titleLabel = UILabel()
     let yearLabel = UILabel()
@@ -34,12 +34,21 @@ class MovieInfoCell: UITableViewCell {
         }
         
         // ImageView Constraints
+//        NSLayoutConstraint.activate([
+//            movieImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+//            movieImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+//            movieImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
+//            movieImageView.widthAnchor.constraint(equalTo: movieImageView.heightAnchor)
+//        ])
         NSLayoutConstraint.activate([
             movieImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             movieImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             movieImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
-            movieImageView.widthAnchor.constraint(equalTo: movieImageView.heightAnchor)
+
+            // Задаем фиксированную ширину
+            movieImageView.widthAnchor.constraint(equalToConstant: 100) // Например, ширина 100
         ])
+
         
         // Title Label Constraints
         NSLayoutConstraint.activate([
@@ -90,12 +99,12 @@ class MovieInfoCell: UITableViewCell {
         titleLabel.text = movie.name
         yearLabel.text = "\(movie.year)"
         genreLabel.text = movie.genres.joined(separator: ", ")
-        // Загрузите изображение в movieImageView
         
+        // Загрузите изображение в movieImageView
         DispatchQueue.main.async { [self] in
             // Загрузка изображения
             if let posterURLString = movie.posterURL, let posterURL = URL(string: posterURLString) {
-                loadImage(from: posterURL) { [self] image in
+                KinopoiskApi.shared.loadImage(from: posterURL) { [self] image in
                     movieImageView.image = image
                 }
             } else {
