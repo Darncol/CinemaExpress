@@ -17,6 +17,13 @@ final class FavoriteFilmsTableViewController: UITableViewController {
         moviesDownloaded = RealmService.shared.loadMovies()
     }
     
+    func movieInfoCellButtonTapped(cell: MovieInfoCell) {
+           guard let indexPath = tableView.indexPath(for: cell) else { return }
+           let movie = moviesDownloaded[indexPath.row]
+           // Логика обработки нажатия кнопки
+           print("Кнопка нажата для фильма: \(movie.name)")
+       }
+    
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

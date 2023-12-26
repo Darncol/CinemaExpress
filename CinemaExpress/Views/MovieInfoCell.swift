@@ -14,6 +14,8 @@ final class MovieInfoCell: UITableViewCell {
     let genreLabel = UILabel()
     let viewButton = UIButton()
     
+    var onButtonTapped: (() -> Void)?
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         // Настройка интерфейса ячейки
@@ -31,24 +33,27 @@ final class MovieInfoCell: UITableViewCell {
         [movieImageView, titleLabel, yearLabel, genreLabel, viewButton].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             contentView.addSubview($0)
+            viewButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         }
         
+        
+        
         // ImageView Constraints
-//        NSLayoutConstraint.activate([
-//            movieImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
-//            movieImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
-//            movieImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
-//            movieImageView.widthAnchor.constraint(equalTo: movieImageView.heightAnchor)
-//        ])
+        //        NSLayoutConstraint.activate([
+        //            movieImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+        //            movieImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+        //            movieImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
+        //            movieImageView.widthAnchor.constraint(equalTo: movieImageView.heightAnchor)
+        //        ])
         NSLayoutConstraint.activate([
             movieImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             movieImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             movieImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
-
+            
             // Задаем фиксированную ширину
             movieImageView.widthAnchor.constraint(equalToConstant: 100) // Например, ширина 100
         ])
-
+        
         
         // Title Label Constraints
         NSLayoutConstraint.activate([
@@ -117,4 +122,19 @@ final class MovieInfoCell: UITableViewCell {
         viewButton.setTitle(title, for: .normal)
     }
     
+}
+
+extension MovieInfoCell {
+    @objc private func buttonTapped() {
+        UIView.animate(withDuration: 0.1, animations: {
+            // Уменьшаем прозрачность кнопки при нажатии
+            self.viewButton.alpha = 0.5
+        }) { (_) in
+            UIView.animate(withDuration: 0.1) {
+                // Возвращаем прозрачность кнопки к нормальному состоянию
+                self.viewButton.alpha = 1.0
+            }
+        }
+        onButtonTapped?()
+    }
 }
