@@ -24,24 +24,20 @@ final class SearchTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    
-    // MARK: - Table view data source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return moviesFounded.count
+        moviesFounded.count
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieInfoCell", for: indexPath) as! MovieInfoCell
-        let movie = moviesFounded[indexPath.row]
+        var movie = moviesFounded[indexPath.row]
         
         cell.configure(with: movie)
         cell.setButton(title: "Добавить")
-        cell.onButtonTapped = { [weak self] in
-            guard let self = self else { return }
+        cell.onButtonTapped = {
+            movie.image = cell.movieImageView.image
             RealmService.shared.saveMovie(movie)
+            NotificationCenter.default.post(name: .reloadDataNotification, object: nil)
         }
         return cell
     }

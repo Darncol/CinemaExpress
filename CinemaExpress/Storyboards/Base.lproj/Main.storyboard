@@ -116,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="2013.4883720930231" y="-513.09012875536484"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="Wjz-uw-D3T">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="N0t-T9-fjv" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="N0t-T9-fjv" customClass="TabBarViewController" customModule="CinemaExpress" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LNG-Wa-CJU">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

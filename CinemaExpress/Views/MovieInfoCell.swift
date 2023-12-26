@@ -37,14 +37,6 @@ final class MovieInfoCell: UITableViewCell {
         }
         
         
-        
-        // ImageView Constraints
-        //        NSLayoutConstraint.activate([
-        //            movieImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
-        //            movieImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
-        //            movieImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
-        //            movieImageView.widthAnchor.constraint(equalTo: movieImageView.heightAnchor)
-        //        ])
         NSLayoutConstraint.activate([
             movieImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             movieImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
@@ -107,13 +99,27 @@ final class MovieInfoCell: UITableViewCell {
         
         // Загрузите изображение в movieImageView
         DispatchQueue.main.async { [self] in
-            // Загрузка изображения
-            if let posterURLString = movie.posterURL, let posterURL = URL(string: posterURLString) {
-                KinopoiskApi.shared.loadImage(from: posterURL) { [self] image in
-                    movieImageView.image = image
-                }
+            //            // Загрузка изображения
+            //            if let posterURLString = movie.posterURL, let posterURL = URL(string: posterURLString) {
+            //                KinopoiskApi.shared.loadImage(from: posterURL) { [self] image in
+            //                    movieImageView.image = image
+            //                }
+            //            } else {
+            //                movieImageView.image = UIImage(systemName: "star")
+            //            }
+
+            if let localImageURL = movie.localImageURL, let url = URL(string: localImageURL), let localImage = ImageManager.shared.loadImageFromFileSystem(url: url) {
+                movieImageView.image = localImage
+                print("loaded from localStore")
             } else {
-                movieImageView.image = UIImage(systemName: "star")
+                // Если изображение отсутствует на устройстве, загружаем его из интернета
+                if let posterURLString = movie.posterURL, let posterURL = URL(string: posterURLString) {
+                    KinopoiskApi.shared.loadImage(from: posterURL) { [weak self] image in
+                        self?.movieImageView.image = image
+                    }
+                } else {
+                    movieImageView.image = UIImage(systemName: "star") // Заглушка, если изображение отсутствует
+                }
             }
         }
     }

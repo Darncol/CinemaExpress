@@ -22,6 +22,8 @@ final class RealmService {
         // Сохраняем изображение в файловой системе, если оно есть
         if let image = movie.image {
             localMovie.localImageURL = ImageManager.shared.saveImageToFileSystem(image: image)?.absoluteString
+        } else {
+            print("not saved")
         }
         
         let movieObject = MovieObject(from: localMovie)
@@ -37,6 +39,8 @@ final class RealmService {
             // Загружаем изображение из файловой системы, если URL доступен
             if let localImageURL = obj.localImageURL, let url = URL(string: localImageURL) {
                 movie.image = ImageManager.shared.loadImageFromFileSystem(url: url)
+            } else {
+                print("Not loaded")
             }
             return movie
         }
