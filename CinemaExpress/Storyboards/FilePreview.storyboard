@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--File Preview View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="FilePreviewViewController" customModule="CinemaExpress" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wx1-Jy-OIS">
+                                <rect key="frame" x="30" y="79" width="370" height="554.33333333333337"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="iC3-mT-09d">
+                                <rect key="frame" x="30" y="851.33333333333337" width="370" height="26.666666666666629"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROm-Ec-H7y">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="26.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="star" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8f-0K-VLY">
+                                        <rect key="frame" x="80" y="0.0" width="50" height="26.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="star" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbl-tT-Avx">
+                                        <rect key="frame" x="160" y="0.0" width="50" height="26.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="star" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVR-1C-xpU">
+                                        <rect key="frame" x="240" y="0.0" width="50" height="26.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="star" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kc-dv-VwD">
+                                        <rect key="frame" x="320" y="0.0" width="50" height="26.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="star" catalog="system"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="Wba-gR-fwf">
+                                <rect key="frame" x="30" y="658.33333333333337" width="370" height="153"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название фильма" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSQ-JE-U40">
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Жарны" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrW-5l-1pz">
+                                        <rect key="frame" x="0.0" y="66.333333333333258" width="370" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="lQO-tI-sNQ">
+                                        <rect key="frame" x="0.0" y="132.66666666666663" width="370" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="iC3-mT-09d" secondAttribute="bottom" constant="20" id="7hO-F1-atc"/>
+                            <constraint firstItem="Wba-gR-fwf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Cbj-wL-ure"/>
+                            <constraint firstItem="wx1-Jy-OIS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="EfT-vX-hUC"/>
+                            <constraint firstItem="iC3-mT-09d" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="FEo-rk-KU9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="iC3-mT-09d" secondAttribute="trailing" constant="30" id="JLf-zX-fOa"/>
+                            <constraint firstItem="iC3-mT-09d" firstAttribute="top" secondItem="Wba-gR-fwf" secondAttribute="bottom" constant="40" id="dMH-SW-QQI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wx1-Jy-OIS" secondAttribute="trailing" constant="30" id="eFF-au-DNT"/>
+                            <constraint firstItem="Wba-gR-fwf" firstAttribute="top" secondItem="wx1-Jy-OIS" secondAttribute="bottom" constant="25" id="qQi-4k-FPw"/>
+                            <constraint firstItem="wx1-Jy-OIS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="uvi-08-Ski"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Wba-gR-fwf" secondAttribute="trailing" constant="30" id="zA9-hA-0Ia"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="lQO-tI-sNQ" id="mcs-Qy-giK"/>
+                        <outlet property="filmNameLabel" destination="bSQ-JE-U40" id="Yd9-dI-LHh"/>
+                        <outlet property="genreLabel" destination="zrW-5l-1pz" id="BRX-9b-W2q"/>
+                        <outlet property="imageView" destination="wx1-Jy-OIS" id="PDH-RJ-LT5"/>
+                        <outletCollection property="starButtons" destination="ROm-Ec-H7y" collectionClass="NSMutableArray" id="Ki0-35-2PE"/>
+                        <outletCollection property="starButtons" destination="E8f-0K-VLY" collectionClass="NSMutableArray" id="Ysy-Yg-NAo"/>
+                        <outletCollection property="starButtons" destination="xbl-tT-Avx" collectionClass="NSMutableArray" id="DoK-fL-QBh"/>
+                        <outletCollection property="starButtons" destination="ZVR-1C-xpU" collectionClass="NSMutableArray" id="R2s-vB-lpE"/>
+                        <outletCollection property="starButtons" destination="2Kc-dv-VwD" collectionClass="NSMutableArray" id="QQS-I4-tW7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.25" y="-2.112676056338028"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

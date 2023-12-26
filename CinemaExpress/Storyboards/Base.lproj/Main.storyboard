@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N0t-T9-fjv">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Избранное-->
+        <scene sceneID="lpZ-A2-7Md">
+            <objects>
+                <tableViewController id="uAR-Q6-Sgm" customClass="FavoriteFilmsTableViewController" customModule="CinemaExpress" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="pmL-W3-t71">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="DRL-Sb-Vp9" customClass="MovieInfoCell" customModule="CinemaExpress" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DRL-Sb-Vp9" id="ICm-2B-8WS">
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uAR-Q6-Sgm" id="7df-qs-TEO"/>
+                            <outlet property="delegate" destination="uAR-Q6-Sgm" id="hoC-OT-s1u"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Избранное" id="bRs-hm-Idg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YiS-AA-SK5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2893.953488372093" y="-513.09012875536484"/>
+        </scene>
+        <!--Избранное-->
+        <scene sceneID="uIT-oK-CMK">
+            <objects>
+                <navigationController id="33w-64-A1m" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Избранное" image="star.circle.fill" catalog="system" id="Kkd-6g-1KY"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6vb-pI-oLn">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uAR-Q6-Sgm" kind="relationship" relationship="rootViewController" id="t3e-HX-usg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vox-DM-jPd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2013.4883720930231" y="-513.09012875536484"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Wjz-uw-D3T">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="N0t-T9-fjv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LNG-Wa-CJU">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="33w-64-A1m" kind="relationship" relationship="viewControllers" id="v38-qX-v56"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgR-zg-8Ff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1114.8837209302326" y="-513.09012875536484"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

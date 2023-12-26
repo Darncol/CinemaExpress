@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E2E06292B39A82600609C69 /* FilePreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E2E06282B39A82600609C69 /* FilePreview.storyboard */; };
+		0E2E062B2B39B1A000609C69 /* FilePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E062A2B39B1A000609C69 /* FilePreviewViewController.swift */; };
+		8816D8822B3A0500008C22D8 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 8816D8812B3A0500008C22D8 /* Realm */; };
+		8816D8842B3A0500008C22D8 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8816D8832B3A0500008C22D8 /* RealmSwift */; };
+		8816D8872B3A055D008C22D8 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816D8862B3A055D008C22D8 /* RealmService.swift */; };
+		8816D8892B3A099A008C22D8 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816D8882B3A099A008C22D8 /* ImageManager.swift */; };
+		886BF4952B383DD600BCA811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886BF4942B383DD600BCA811 /* AppDelegate.swift */; };
+		886BF4972B383DD600BCA811 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886BF4962B383DD600BCA811 /* SceneDelegate.swift */; };
+		886BF49C2B383DD600BCA811 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 886BF49A2B383DD600BCA811 /* Main.storyboard */; };
+		886BF49E2B383DD700BCA811 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 886BF49D2B383DD700BCA811 /* Assets.xcassets */; };
+		886BF4A12B383DD700BCA811 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 886BF49F2B383DD700BCA811 /* LaunchScreen.storyboard */; };
+		886C99F22B3B255300C3EBD5 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C99F12B3B255300C3EBD5 /* SearchTableViewController.swift */; };
+		88C1319E2B3989590082E36B /* KinopoiskApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C1319D2B3989590082E36B /* KinopoiskApi.swift */; };
+		88C131A12B39AFDE0082E36B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C131A02B39AFDE0082E36B /* Movie.swift */; };
+		88C131A42B39BD490082E36B /* MovieInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C131A32B39BD490082E36B /* MovieInfoCell.swift */; };
+		88C131A62B39C1960082E36B /* FavoriteFilmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C131A52B39C1960082E36B /* FavoriteFilmsTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0E2E06282B39A82600609C69 /* FilePreview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilePreview.storyboard; sourceTree = "<group>"; };
+		0E2E062A2B39B1A000609C69 /* FilePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePreviewViewController.swift; sourceTree = "<group>"; };
+		8816D8862B3A055D008C22D8 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		8816D8882B3A099A008C22D8 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		886BF4912B383DD600BCA811 /* CinemaExpress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinemaExpress.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		886BF4942B383DD600BCA811 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		886BF4962B383DD600BCA811 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		886BF49B2B383DD600BCA811 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		886BF49D2B383DD700BCA811 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		886BF4A02B383DD700BCA811 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		886BF4A22B383DD700BCA811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		886C99F12B3B255300C3EBD5 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		88C1319D2B3989590082E36B /* KinopoiskApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinopoiskApi.swift; sourceTree = "<group>"; };
+		88C131A02B39AFDE0082E36B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		88C131A32B39BD490082E36B /* MovieInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoCell.swift; sourceTree = "<group>"; };
+		88C131A52B39C1960082E36B /* FavoriteFilmsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFilmsTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		886BF48E2B383DD600BCA811 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8816D8842B3A0500008C22D8 /* RealmSwift in Frameworks */,
+				8816D8822B3A0500008C22D8 /* Realm in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8816D8852B3A0520008C22D8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8816D8862B3A055D008C22D8 /* RealmService.swift */,
+				8816D8882B3A099A008C22D8 /* ImageManager.swift */,
+				88C1319D2B3989590082E36B /* KinopoiskApi.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		886BF4882B383DD600BCA811 = {
+			isa = PBXGroup;
+			children = (
+				886BF4932B383DD600BCA811 /* CinemaExpress */,
+				886BF4922B383DD600BCA811 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		886BF4922B383DD600BCA811 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				886BF4912B383DD600BCA811 /* CinemaExpress.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		886BF4932B383DD600BCA811 /* CinemaExpress */ = {
+			isa = PBXGroup;
+			children = (
+				8816D8852B3A0520008C22D8 /* Services */,
+				88C131A22B39BD200082E36B /* Views */,
+				88C1319F2B39AFCC0082E36B /* Model */,
+				887864B12B387EC4006CF05E /* ViewControllers */,
+				887864B22B387EDC006CF05E /* Storyboards */,
+				887864B02B387EBC006CF05E /* App */,
+				886BF49D2B383DD700BCA811 /* Assets.xcassets */,
+			);
+			path = CinemaExpress;
+			sourceTree = "<group>";
+		};
+		887864B02B387EBC006CF05E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				886BF4942B383DD600BCA811 /* AppDelegate.swift */,
+				886BF4962B383DD600BCA811 /* SceneDelegate.swift */,
+				886BF4A22B383DD700BCA811 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		887864B12B387EC4006CF05E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0E2E062A2B39B1A000609C69 /* FilePreviewViewController.swift */,
+				88C131A52B39C1960082E36B /* FavoriteFilmsTableViewController.swift */,
+				886C99F12B3B255300C3EBD5 /* SearchTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		887864B22B387EDC006CF05E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				886BF49A2B383DD600BCA811 /* Main.storyboard */,
+				886BF49F2B383DD700BCA811 /* LaunchScreen.storyboard */,
+				0E2E06282B39A82600609C69 /* FilePreview.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		88C1319F2B39AFCC0082E36B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88C131A02B39AFDE0082E36B /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88C131A22B39BD200082E36B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				88C131A32B39BD490082E36B /* MovieInfoCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		886BF4902B383DD600BCA811 /* CinemaExpress */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 886BF4A52B383DD700BCA811 /* Build configuration list for PBXNativeTarget "CinemaExpress" */;
+			buildPhases = (
+				886BF48D2B383DD600BCA811 /* Sources */,
+				886BF48E2B383DD600BCA811 /* Frameworks */,
+				886BF48F2B383DD600BCA811 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CinemaExpress;
+			packageProductDependencies = (
+				8816D8812B3A0500008C22D8 /* Realm */,
+				8816D8832B3A0500008C22D8 /* RealmSwift */,
+			);
+			productName = CinemaExpress;
+			productReference = 886BF4912B383DD600BCA811 /* CinemaExpress.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		886BF4892B383DD600BCA811 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					886BF4902B383DD600BCA811 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+				};
+			};
+			buildConfigurationList = 886BF48C2B383DD600BCA811 /* Build configuration list for PBXProject "CinemaExpress" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 886BF4882B383DD600BCA811;
+			packageReferences = (
+				8816D8802B3A0500008C22D8 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
+			productRefGroup = 886BF4922B383DD600BCA811 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				886BF4902B383DD600BCA811 /* CinemaExpress */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		886BF48F2B383DD600BCA811 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				886BF4A12B383DD700BCA811 /* LaunchScreen.storyboard in Resources */,
+				886BF49E2B383DD700BCA811 /* Assets.xcassets in Resources */,
+				886BF49C2B383DD600BCA811 /* Main.storyboard in Resources */,
+				0E2E06292B39A82600609C69 /* FilePreview.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		886BF48D2B383DD600BCA811 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				886BF4952B383DD600BCA811 /* AppDelegate.swift in Sources */,
+				88C131A42B39BD490082E36B /* MovieInfoCell.swift in Sources */,
+				88C1319E2B3989590082E36B /* KinopoiskApi.swift in Sources */,
+				8816D8892B3A099A008C22D8 /* ImageManager.swift in Sources */,
+				0E2E062B2B39B1A000609C69 /* FilePreviewViewController.swift in Sources */,
+				886BF4972B383DD600BCA811 /* SceneDelegate.swift in Sources */,
+				88C131A62B39C1960082E36B /* FavoriteFilmsTableViewController.swift in Sources */,
+				886C99F22B3B255300C3EBD5 /* SearchTableViewController.swift in Sources */,
+				88C131A12B39AFDE0082E36B /* Movie.swift in Sources */,
+				8816D8872B3A055D008C22D8 /* RealmService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		886BF49A2B383DD600BCA811 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				886BF49B2B383DD600BCA811 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		886BF49F2B383DD700BCA811 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				886BF4A02B383DD700BCA811 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		886BF4A32B383DD700BCA811 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		886BF4A42B383DD700BCA811 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		886BF4A62B383DD700BCA811 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22F4X6HQFV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CinemaExpress/App/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mrakSoft.CinemaExpress;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		886BF4A72B383DD700BCA811 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22F4X6HQFV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CinemaExpress/App/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mrakSoft.CinemaExpress;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		886BF48C2B383DD600BCA811 /* Build configuration list for PBXProject "CinemaExpress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				886BF4A32B383DD700BCA811 /* Debug */,
+				886BF4A42B383DD700BCA811 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		886BF4A52B383DD700BCA811 /* Build configuration list for PBXNativeTarget "CinemaExpress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				886BF4A62B383DD700BCA811 /* Debug */,
+				886BF4A72B383DD700BCA811 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8816D8802B3A0500008C22D8 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.45.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8816D8812B3A0500008C22D8 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8816D8802B3A0500008C22D8 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		8816D8832B3A0500008C22D8 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8816D8802B3A0500008C22D8 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 886BF4892B383DD600BCA811 /* Project object */;
+}
