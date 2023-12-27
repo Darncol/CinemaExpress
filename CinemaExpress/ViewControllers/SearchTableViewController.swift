@@ -16,14 +16,15 @@ final class SearchTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
+        
         tableView.register(MovieInfoCell.self, forCellReuseIdentifier: "MovieInfoCell")
     }
     
     @IBAction func ClearButtonTapped(_ sender: UIBarButtonItem) {
         moviesFounded = []
         tableView.reloadData()
+        view.endEditing(true)
     }
-    
 }
 
 // MARK: - UISearchBarDelegate
@@ -38,6 +39,10 @@ extension SearchTableViewController: UISearchBarDelegate {
         }
         searchBar.resignFirstResponder()
     }
+    
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+           searchBar.resignFirstResponder()
+       }
 }
 
 // MARK: - Segue Handling
@@ -76,9 +81,7 @@ extension SearchTableViewController {
         return 142
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        view.endEditing(true)
-        
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {        
         performSegue(withIdentifier: "movieDetails", sender: indexPath)
     }
 }
