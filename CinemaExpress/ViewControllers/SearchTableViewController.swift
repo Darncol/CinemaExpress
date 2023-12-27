@@ -24,6 +24,34 @@ final class SearchTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+}
+
+// MARK: - UISearchBarDelegate
+extension SearchTableViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let text = searchBar.text else { return }
+        KinopoiskApi.shared.fetchMovies(withTitle: text) { [weak self] movies in
+            DispatchQueue.main.async {
+                self?.moviesFounded = movies
+                self?.tableView.reloadData()
+            }
+        }
+        searchBar.resignFirstResponder()
+    }
+}
+
+// MARK: - Segue Handling
+extension SearchTableViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinaion = segue.destination as? FilePreviewViewController,
+              let indexPath = sender as? IndexPath else { return }
+        destinaion.movie = moviesFounded[indexPath.row]
+        destinaion.isButtonsHidden = true
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension SearchTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         moviesFounded.count
     }
@@ -41,7 +69,10 @@ final class SearchTableViewController: UITableViewController {
         }
         return cell
     }
-    
+}
+
+// MARK: - UITableViewDelegate
+extension SearchTableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 142
     }
@@ -50,26 +81,5 @@ final class SearchTableViewController: UITableViewController {
         view.endEditing(true)
         
         performSegue(withIdentifier: "movieDetails", sender: indexPath)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destinaion = segue.destination as? FilePreviewViewController,
-              let indexPath = sender as? IndexPath else { return }
-        destinaion.movie = moviesFounded[indexPath.row]
-        destinaion.isButtonsHidden = true
-    }
-}
-
-// MARK: - UISearchBarDelegate
-extension SearchTableViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let text = searchBar.text else { return }
-        KinopoiskApi.shared.fetchMovies(withTitle: text) { [weak self] movies in
-            DispatchQueue.main.async {
-                self?.moviesFounded = movies
-                self?.tableView.reloadData()
-            }
-        }
-        searchBar.resignFirstResponder()
     }
 }

@@ -17,23 +17,17 @@ final class FavoriteFilmsTableViewController: UITableViewController {
         
         moviesDownloaded = RealmService.shared.loadMovies()
         
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(reloadTableData),
-            name: .reloadDataNotification,
-            object: nil
-        )
+        addObserver()
     }
     
-    func movieInfoCellButtonTapped(cell: MovieInfoCell) {
-        guard let indexPath = tableView.indexPath(for: cell) else { return }
-        let movie = moviesDownloaded[indexPath.row]
-        // Логика обработки нажатия кнопки
-        print("Кнопка нажата для фильма: \(movie.name)")
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
-    // MARK: - Table view data source
-    
+}
+
+// MARK: - UITableViewDataSource
+extension FavoriteFilmsTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         moviesDownloaded.count
     }
@@ -45,13 +39,10 @@ final class FavoriteFilmsTableViewController: UITableViewController {
         cell.configure(with: movie)
         return cell
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destinaion = segue.destination as? FilePreviewViewController,
-              let indexPath = sender as? IndexPath else { return }
-        destinaion.movie = moviesDownloaded[indexPath.row]
-    }
-    
+}
+
+// MARK: - UITableViewDelegate
+extension FavoriteFilmsTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showFilmInfo", sender: indexPath)
     }
@@ -59,17 +50,31 @@ final class FavoriteFilmsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 142
     }
+}
+
+// MARK: - Segue Handling
+extension FavoriteFilmsTableViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinaion = segue.destination as? FilePreviewViewController,
+              let indexPath = sender as? IndexPath else { return }
+        destinaion.movie = moviesDownloaded[indexPath.row]
+    }
+}
+
+// MARK: - Notification Handling
+extension FavoriteFilmsTableViewController {
+    private func addObserver() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(reloadTableData),
+            name: .reloadDataNotification,
+            object: nil
+        )
+    }
     
     @objc private func reloadTableData() {
         moviesDownloaded = RealmService.shared.loadMovies()
         tableView.reloadData()
     }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
 }
-
-
 
