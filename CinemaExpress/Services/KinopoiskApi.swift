@@ -8,6 +8,26 @@
 import Foundation
 import UIKit
 
+/*
+// Пример использования
+ fetchMovies(withTitle: "Зеленая миля") { movies in
+     for movie in movies {
+         // Обновление UI в главном потоке
+         DispatchQueue.main.async {
+             self.movieInfo.text = "\(movie.name) (\(movie.year)), Жанры: \(movie.genres.joined(separator: ", ")), Постер: \(movie.posterURL ?? "нет")"
+
+             // Загрузка изображения
+             if let posterURLString = movie.posterURL, let posterURL = URL(string: posterURLString) {
+                 self.loadImage(from: posterURL) { image in
+                     self.poster.image = image
+                 }
+             } else {
+                 self.poster.image = UIImage(named: "нет")
+             }
+         }
+     }
+ }
+*/
 final class KinopoiskApi {
     static let shared = KinopoiskApi()
     
@@ -75,25 +95,3 @@ final class KinopoiskApi {
     
     private init() {}
 }
-
-/*
-// Пример использования
- fetchMovies(withTitle: "Зеленая миля") { movies in
-     for movie in movies {
-         // Обновление UI в главном потоке
-         DispatchQueue.main.async {
-             self.movieInfo.text = "\(movie.name) (\(movie.year)), Жанры: \(movie.genres.joined(separator: ", ")), Постер: \(movie.posterURL ?? "нет")"
-
-             // Загрузка изображения
-             if let posterURLString = movie.posterURL, let posterURL = URL(string: posterURLString) {
-                 self.loadImage(from: posterURL) { image in
-                     self.poster.image = image
-                 }
-             } else {
-                 self.poster.image = UIImage(named: "нет")
-             }
-         }
-     }
- }
-
-*/
