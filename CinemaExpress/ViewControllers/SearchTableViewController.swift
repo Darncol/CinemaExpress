@@ -52,6 +52,7 @@ final class SearchTableViewController: UITableViewController {
     }
 }
 
+// MARK: - UISearchBarDelegate
 extension SearchTableViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text else { return }

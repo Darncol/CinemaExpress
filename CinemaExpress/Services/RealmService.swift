@@ -18,6 +18,8 @@ final class RealmService {
     }
     
     func saveMovie(_ movie: Movie) {
+        guard !isMovieAlreadySaved(movie) else { return }
+        
         var localMovie = movie
         // Сохраняем изображение в файловой системе, если оно есть
         if let image = movie.image {
@@ -27,6 +29,13 @@ final class RealmService {
         }
         
         let movieObject = MovieObject(from: localMovie)
+        try! realm.write {
+            realm.add(movieObject)
+        }
+    }
+    
+    func setStarsToMovie(_ movie: Movie) {
+        let movieObject = MovieObject(from: movie)
         try! realm.write {
             realm.add(movieObject)
         }
@@ -60,6 +69,11 @@ final class RealmService {
             ImageManager.shared.deleteImageFromFileSystem(url: url)
         }
     }
+    
+    func isMovieAlreadySaved(_ movie: Movie) -> Bool {
+        realm.objects(MovieObject.self).contains { $0.name == movie.name && $0.year == movie.year }
+    }
+
 }
 
 class MovieObject: Object {
