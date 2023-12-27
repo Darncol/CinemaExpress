@@ -80,6 +80,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="Uqd-Y3-jeO" id="iQa-cl-L6M"/>
+                        <segue destination="Y2E-ow-Jjq" kind="show" identifier="movieDetails" id="zAr-eJ-OKI"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3c-6R-A6m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -251,6 +252,9 @@
             <point key="canvasLocation" x="4664.6511627906975" y="-348.28326180257511"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zAr-eJ-OKI"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="magnifyingglass.circle" catalog="system" width="128" height="123"/>
         <image name="star" catalog="system" width="128" height="116"/>

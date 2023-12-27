@@ -48,7 +48,15 @@ final class SearchTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         view.endEditing(true)
-        tableView.deselectRow(at: indexPath, animated: true)
+        
+        performSegue(withIdentifier: "movieDetails", sender: indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinaion = segue.destination as? FilePreviewViewController,
+              let indexPath = sender as? IndexPath else { return }
+        destinaion.movie = moviesFounded[indexPath.row]
+        destinaion.isButtonsHidden = true
     }
 }
 

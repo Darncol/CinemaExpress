@@ -34,6 +34,7 @@ final class RealmService {
         }
     }
     
+    //Пересохраняет фильм с оценкой
     func setStarsToMovie(_ movie: Movie) {
         let movieObject = MovieObject(from: movie)
         try! realm.write {

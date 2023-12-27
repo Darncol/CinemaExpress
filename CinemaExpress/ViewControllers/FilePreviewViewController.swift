@@ -17,11 +17,32 @@ final class FilePreviewViewController: UIViewController {
     
     var movie: Movie!
     
+    var isButtonsHidden = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpUI()
+    }
+    
+    private func setUpUI(){
         filmNameLabel.text = movie.name
         genreLabel.text = movie.genres.joined(separator: ", ")
         descriptionLabel.text = movie.description
-        imageView.image = movie.image
+        
+        if let image = movie.image {
+            imageView.image = image
+        } else {
+            if let movieImageUrl = movie.posterURL ,let imageUrl = URL(string: movieImageUrl) {
+                KinopoiskApi.shared.loadImage(from: imageUrl) { [self] image in
+                    imageView.image = image
+                }
+            }
+        }
+        
+        starButtons.forEach{
+            $0.isHidden = isButtonsHidden
+        }
     }
 }
+
+
