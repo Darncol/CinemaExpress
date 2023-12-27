@@ -37,6 +37,11 @@ extension FavoriteFilmsTableViewController {
         let movie = moviesDownloaded[indexPath.row]
         
         cell.configure(with: movie)
+        cell.onButtonTapped = { [self] in
+            RealmService.shared.deleteMovie(movie)
+            moviesDownloaded.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
         return cell
     }
 }

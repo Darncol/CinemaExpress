@@ -46,7 +46,6 @@ extension SearchTableViewController {
         guard let destinaion = segue.destination as? FilePreviewViewController,
               let indexPath = sender as? IndexPath else { return }
         destinaion.movie = moviesFounded[indexPath.row]
-        destinaion.isButtonsHidden = true
     }
 }
 

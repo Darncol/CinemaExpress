@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Избранное-->
+        <!--🍿 Что посмотреть 🧐-->
         <scene sceneID="lpZ-A2-7Md">
             <objects>
                 <tableViewController id="uAR-Q6-Sgm" customClass="FavoriteFilmsTableViewController" customModule="CinemaExpress" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,7 @@
                             <outlet property="delegate" destination="uAR-Q6-Sgm" id="hoC-OT-s1u"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Избранное" id="bRs-hm-Idg"/>
+                    <navigationItem key="navigationItem" title="🍿 Что посмотреть 🧐" id="bRs-hm-Idg"/>
                     <connections>
                         <segue destination="Y2E-ow-Jjq" kind="show" identifier="showFilmInfo" id="A6A-Mk-D8u"/>
                     </connections>
@@ -40,7 +40,7 @@
             </objects>
             <point key="canvasLocation" x="2893.953488372093" y="-513.09012875536484"/>
         </scene>
-        <!--Поиск фильмов-->
+        <!--🔎 Поиск фильмов 🔍-->
         <scene sceneID="t5T-Gb-9hg">
             <objects>
                 <tableViewController id="8At-yV-wBd" customClass="SearchTableViewController" customModule="CinemaExpress" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,7 +71,7 @@
                             <outlet property="delegate" destination="8At-yV-wBd" id="7Rg-su-GNH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Поиск фильмов" id="BlC-sv-WDu">
+                    <navigationItem key="navigationItem" title="🔎 Поиск фильмов 🔍" id="BlC-sv-WDu">
                         <barButtonItem key="rightBarButtonItem" systemItem="stop" id="tDT-ZN-xA8">
                             <connections>
                                 <action selector="ClearButtonTapped:" destination="8At-yV-wBd" id="IJ2-HC-4Na"/>
@@ -149,50 +149,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NMr-Zi-huK">
-                                <rect key="frame" x="30" y="123.00000000000003" width="370" height="399.66666666666674"/>
+                                <rect key="frame" x="30" y="122.99999999999997" width="370" height="446.33333333333326"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="qgF-Tf-N5P">
-                                <rect key="frame" x="30" y="802.33333333333337" width="370" height="26.666666666666629"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVI-ZK-kFA">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="26.666666666666668"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="tintColor" systemColor="systemYellowColor"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="star" catalog="system"/>
-                                    </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAM-Cw-Cfv">
-                                        <rect key="frame" x="80" y="0.0" width="50" height="26.666666666666668"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="tintColor" systemColor="systemYellowColor"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="star" catalog="system"/>
-                                    </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Kj-8x-qiB">
-                                        <rect key="frame" x="160" y="0.0" width="50" height="26.666666666666668"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="tintColor" systemColor="systemYellowColor"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="star" catalog="system"/>
-                                    </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNx-4p-Qjl">
-                                        <rect key="frame" x="240" y="0.0" width="50" height="26.666666666666668"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="tintColor" systemColor="systemYellowColor"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="star" catalog="system"/>
-                                    </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7J-Gh-NAm">
-                                        <rect key="frame" x="320" y="0.0" width="50" height="26.666666666666668"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="tintColor" systemColor="systemYellowColor"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="star" catalog="system"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="HlS-EB-rca">
-                                <rect key="frame" x="30" y="542.66666666666663" width="370" height="65.666666666666629"/>
+                                <rect key="frame" x="30" y="589.33333333333337" width="370" height="65.666666666666629"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название фильма" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0g-zf-3jT">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="20.333333333333332"/>
@@ -201,7 +161,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Жарны" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="50m-3W-5cc">
-                                        <rect key="frame" x="0.0" y="45.333333333333371" width="370" height="20.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="45.333333333333258" width="370" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -209,7 +169,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="yja-ia-rec">
-                                <rect key="frame" x="30" y="618.33333333333337" width="370" height="164"/>
+                                <rect key="frame" x="30" y="665" width="370" height="164"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -218,19 +178,16 @@
                         <viewLayoutGuide key="safeArea" id="Akw-IQ-RPf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qgF-Tf-N5P" firstAttribute="leading" secondItem="Akw-IQ-RPf" secondAttribute="leading" constant="30" id="0Yw-W5-pM8"/>
                             <constraint firstItem="HlS-EB-rca" firstAttribute="leading" secondItem="Akw-IQ-RPf" secondAttribute="leading" constant="30" id="4Hh-Jg-FRS"/>
                             <constraint firstItem="yja-ia-rec" firstAttribute="height" secondItem="1Nx-eF-ip6" secondAttribute="height" multiplier="0.176056" id="GSn-x0-Xwh"/>
                             <constraint firstItem="Akw-IQ-RPf" firstAttribute="trailing" secondItem="yja-ia-rec" secondAttribute="trailing" constant="30" id="GcQ-Kq-Xje"/>
-                            <constraint firstItem="Akw-IQ-RPf" firstAttribute="trailing" secondItem="qgF-Tf-N5P" secondAttribute="trailing" constant="30" id="Gpy-GC-f0x"/>
+                            <constraint firstItem="Akw-IQ-RPf" firstAttribute="bottom" secondItem="yja-ia-rec" secondAttribute="bottom" constant="20" id="IU7-06-HFh"/>
                             <constraint firstItem="yja-ia-rec" firstAttribute="leading" secondItem="Akw-IQ-RPf" secondAttribute="leading" constant="30" id="Ld3-5x-mPI"/>
                             <constraint firstItem="yja-ia-rec" firstAttribute="top" secondItem="HlS-EB-rca" secondAttribute="bottom" constant="10" id="QRV-Kg-YdW"/>
                             <constraint firstItem="NMr-Zi-huK" firstAttribute="top" secondItem="Akw-IQ-RPf" secondAttribute="top" constant="20" id="TSG-x1-EyG"/>
                             <constraint firstItem="NMr-Zi-huK" firstAttribute="leading" secondItem="Akw-IQ-RPf" secondAttribute="leading" constant="30" id="dpJ-7e-jGU"/>
                             <constraint firstItem="HlS-EB-rca" firstAttribute="top" secondItem="NMr-Zi-huK" secondAttribute="bottom" constant="20" id="etx-ZQ-9kn"/>
-                            <constraint firstItem="Akw-IQ-RPf" firstAttribute="bottom" secondItem="qgF-Tf-N5P" secondAttribute="bottom" constant="20" id="pzH-VD-j9u"/>
                             <constraint firstItem="Akw-IQ-RPf" firstAttribute="trailing" secondItem="HlS-EB-rca" secondAttribute="trailing" constant="30" id="q2j-Kk-sqA"/>
-                            <constraint firstItem="qgF-Tf-N5P" firstAttribute="top" secondItem="yja-ia-rec" secondAttribute="bottom" constant="20" id="qw4-Qs-vZD"/>
                             <constraint firstItem="Akw-IQ-RPf" firstAttribute="trailing" secondItem="NMr-Zi-huK" secondAttribute="trailing" constant="30" id="vhd-Sx-oXQ"/>
                         </constraints>
                     </view>
@@ -240,11 +197,6 @@
                         <outlet property="filmNameLabel" destination="c0g-zf-3jT" id="LC0-xO-xVO"/>
                         <outlet property="genreLabel" destination="50m-3W-5cc" id="YCM-UR-Ybg"/>
                         <outlet property="imageView" destination="NMr-Zi-huK" id="o0d-B8-cWe"/>
-                        <outletCollection property="starButtons" destination="nVI-ZK-kFA" collectionClass="NSMutableArray" id="A89-Ek-Kjc"/>
-                        <outletCollection property="starButtons" destination="OAM-Cw-Cfv" collectionClass="NSMutableArray" id="zlF-iI-top"/>
-                        <outletCollection property="starButtons" destination="1Kj-8x-qiB" collectionClass="NSMutableArray" id="vAn-3w-E1j"/>
-                        <outletCollection property="starButtons" destination="RNx-4p-Qjl" collectionClass="NSMutableArray" id="goO-Mf-IUy"/>
-                        <outletCollection property="starButtons" destination="r7J-Gh-NAm" collectionClass="NSMutableArray" id="Ta9-nI-3Hs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckb-E7-bKF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -253,17 +205,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zAr-eJ-OKI"/>
+        <segue reference="A6A-Mk-D8u"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="magnifyingglass.circle" catalog="system" width="128" height="123"/>
-        <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

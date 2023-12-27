@@ -13,11 +13,7 @@ final class FilePreviewViewController: UIViewController {
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    @IBOutlet var starButtons: [UIButton]!
-    
     var movie: Movie!
-    
-    var isButtonsHidden = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,10 +33,6 @@ final class FilePreviewViewController: UIViewController {
                     imageView.image = image
                 }
             }
-        }
-        
-        starButtons.forEach{
-            $0.isHidden = isButtonsHidden
         }
     }
 }
