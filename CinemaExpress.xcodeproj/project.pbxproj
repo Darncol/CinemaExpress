@@ -17,12 +17,12 @@
 		886BF49C2B383DD600BCA811 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 886BF49A2B383DD600BCA811 /* Main.storyboard */; };
 		886BF49E2B383DD700BCA811 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 886BF49D2B383DD700BCA811 /* Assets.xcassets */; };
 		886BF4A12B383DD700BCA811 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 886BF49F2B383DD700BCA811 /* LaunchScreen.storyboard */; };
-		886C99F22B3B255300C3EBD5 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C99F12B3B255300C3EBD5 /* SearchTableViewController.swift */; };
+		888FD83F2B3EEF5500250B1D /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888FD83E2B3EEF5500250B1D /* FavouriteViewController.swift */; };
 		889AC0202B3B82CF00CD8872 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889AC01F2B3B82CF00CD8872 /* Notification.swift */; };
+		88AB9FB52B3F04FB00E6E810 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AB9FB42B3F04FB00E6E810 /* SearchViewController.swift */; };
 		88C1319E2B3989590082E36B /* KinopoiskApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C1319D2B3989590082E36B /* KinopoiskApi.swift */; };
 		88C131A12B39AFDE0082E36B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C131A02B39AFDE0082E36B /* Movie.swift */; };
 		88C131A42B39BD490082E36B /* MovieInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C131A32B39BD490082E36B /* MovieInfoCell.swift */; };
-		88C131A62B39C1960082E36B /* FavoriteFilmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C131A52B39C1960082E36B /* FavoriteFilmsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,12 +36,12 @@
 		886BF49D2B383DD700BCA811 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		886BF4A02B383DD700BCA811 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		886BF4A22B383DD700BCA811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		886C99F12B3B255300C3EBD5 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		888FD83E2B3EEF5500250B1D /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		889AC01F2B3B82CF00CD8872 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		88AB9FB42B3F04FB00E6E810 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		88C1319D2B3989590082E36B /* KinopoiskApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinopoiskApi.swift; sourceTree = "<group>"; };
 		88C131A02B39AFDE0082E36B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		88C131A32B39BD490082E36B /* MovieInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoCell.swift; sourceTree = "<group>"; };
-		88C131A52B39C1960082E36B /* FavoriteFilmsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFilmsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +111,9 @@
 		887864B12B387EC4006CF05E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				888FD83E2B3EEF5500250B1D /* FavouriteViewController.swift */,
+				88AB9FB42B3F04FB00E6E810 /* SearchViewController.swift */,
 				0E2E062A2B39B1A000609C69 /* FilePreviewViewController.swift */,
-				88C131A52B39C1960082E36B /* FavoriteFilmsTableViewController.swift */,
-				886C99F12B3B255300C3EBD5 /* SearchTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -233,10 +233,10 @@
 				88C131A42B39BD490082E36B /* MovieInfoCell.swift in Sources */,
 				88C1319E2B3989590082E36B /* KinopoiskApi.swift in Sources */,
 				8816D8892B3A099A008C22D8 /* ImageManager.swift in Sources */,
+				888FD83F2B3EEF5500250B1D /* FavouriteViewController.swift in Sources */,
 				0E2E062B2B39B1A000609C69 /* FilePreviewViewController.swift in Sources */,
+				88AB9FB52B3F04FB00E6E810 /* SearchViewController.swift in Sources */,
 				886BF4972B383DD600BCA811 /* SceneDelegate.swift in Sources */,
-				88C131A62B39C1960082E36B /* FavoriteFilmsTableViewController.swift in Sources */,
-				886C99F22B3B255300C3EBD5 /* SearchTableViewController.swift in Sources */,
 				889AC0202B3B82CF00CD8872 /* Notification.swift in Sources */,
 				88C131A12B39AFDE0082E36B /* Movie.swift in Sources */,
 				8816D8872B3A055D008C22D8 /* RealmService.swift in Sources */,
@@ -397,13 +397,14 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = mrakSoft.CinemaExpress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -428,13 +429,14 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = mrakSoft.CinemaExpress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

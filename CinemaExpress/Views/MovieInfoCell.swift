@@ -59,8 +59,23 @@ extension MovieInfoCell {
         
         // movie - это ваша модель данных, которая содержит информацию для каждой ячейки
         titleLabel.text = movie.name
+        titleLabel.textColor = .yellow
+        titleLabel.shadowColor = UIColor.black
+        titleLabel.shadowOffset = CGSize(width: 1, height: 1)
+        
         yearLabel.text = "\(movie.year)"
+        yearLabel.textColor = .yellow
+        yearLabel.shadowColor = UIColor.black
+        yearLabel.shadowOffset = CGSize(width: 1, height: 1)
+        
         genreLabel.text = movie.genres.joined(separator: ", ")
+        genreLabel.textColor = .yellow
+        genreLabel.shadowColor = UIColor.black
+        genreLabel.shadowOffset = CGSize(width: 1, height: 1)
+        
+        movieImageView.layer.cornerRadius = 10
+        movieImageView.layer.borderWidth = 1
+        movieImageView.layer.borderColor = UIColor.yellow.cgColor
         
         // Загрузите изображение в movieImageView
         DispatchQueue.main.async { [self] in
@@ -73,7 +88,7 @@ extension MovieInfoCell {
                         self?.movieImageView.image = image
                     }
                 } else {
-                    movieImageView.image = UIImage(systemName: "star") // Заглушка, если изображение отсутствует
+                    movieImageView.image = UIImage(named: "noPoster")
                 }
             }
         }
@@ -117,8 +132,9 @@ private extension MovieInfoCell {
         viewButton.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(viewButton)
         viewButton.setTitle("Посмотрел", for: .normal)
-        viewButton.backgroundColor = .systemBlue
-        viewButton.setTitleColor(.white, for: .normal)
+        viewButton.setBackgroundImage(.button, for: .normal)
+        viewButton.layer.borderWidth = 1
+        viewButton.layer.borderColor = UIColor.yellow.cgColor
         viewButton.layer.cornerRadius = 15
         viewButton.clipsToBounds = true
         viewButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)

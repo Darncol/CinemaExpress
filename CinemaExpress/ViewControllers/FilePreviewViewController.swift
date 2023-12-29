@@ -21,6 +21,10 @@ final class FilePreviewViewController: UIViewController {
     }
     
     private func setUpUI(){
+        imageView.layer.cornerRadius = 15
+        imageView.layer.borderWidth = 1
+        imageView.layer.borderColor = UIColor.yellow.cgColor
+        
         filmNameLabel.text = movie.name
         genreLabel.text = movie.genres.joined(separator: ", ")
         descriptionLabel.text = movie.description
