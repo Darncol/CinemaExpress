@@ -36,6 +36,8 @@ final class FilePreviewViewController: UIViewController {
                 KinopoiskApi.shared.loadImage(from: imageUrl) { [self] image in
                     imageView.image = image
                 }
+            } else {
+                imageView.image = UIImage(named: "noPoster")
             }
         }
     }
