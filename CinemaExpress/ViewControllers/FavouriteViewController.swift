@@ -49,7 +49,7 @@ extension FavouriteViewController: UITableViewDataSource {
         cell.configure(with: movie)
         cell.backgroundColor = .clear
         cell.selectionStyle = .none
-        cell.onButtonTapped = { [self] in
+        cell.onButtonTapped = { [unowned self] in
             RealmService.shared.deleteMovie(movie)
             moviesDownloaded.remove(at: indexPath.row)
             tableView.reloadData()
