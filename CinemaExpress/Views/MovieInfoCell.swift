@@ -13,6 +13,7 @@ final class MovieInfoCell: UITableViewCell {
     let yearLabel = UILabel()
     let genreLabel = UILabel()
     let viewButton = UIButton()
+    let activityIndicator = UIActivityIndicatorView()
     
     var onButtonTapped: (() -> Void)?
     
@@ -78,17 +79,20 @@ extension MovieInfoCell {
         movieImageView.layer.borderColor = UIColor.yellow.cgColor
         
         // Загрузите изображение в movieImageView
-        DispatchQueue.main.async { [self] in
+        DispatchQueue.main.async { [unowned self] in
             if let localImageURL = movie.localImageURL, let url = URL(string: localImageURL), let localImage = ImageManager.shared.loadImageFromFileSystem(url: url) {
                 movieImageView.image = localImage
+                activityIndicator.stopAnimating()
             } else {
                 // Если изображение отсутствует на устройстве, загружаем его из интернета
                 if let posterURLString = movie.posterURL, let posterURL = URL(string: posterURLString) {
                     KinopoiskApi.shared.loadImage(from: posterURL) { [weak self] image in
                         self?.movieImageView.image = image
+                        self?.activityIndicator.stopAnimating()
                     }
                 } else {
                     movieImageView.image = UIImage(named: "noPoster")
+                    activityIndicator.stopAnimating()
                 }
             }
         }
@@ -106,6 +110,9 @@ private extension MovieInfoCell {
         contentView.addSubview(movieImageView)
         movieImageView.contentMode = .scaleAspectFill
         movieImageView.clipsToBounds = true
+        movieImageView.addSubview(activityIndicator)
+        
+        setupActivityIndicator()
     }
     
     func setupTitleLabel() {
@@ -140,12 +147,23 @@ private extension MovieInfoCell {
         viewButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
     }
     
+    func setupActivityIndicator() {
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = .large
+        activityIndicator.color = .yellow
+        activityIndicator.startAnimating()
+    }
+    
     func setupConstraints() {
         NSLayoutConstraint.activate([
             movieImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             movieImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             movieImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
             movieImageView.widthAnchor.constraint(equalToConstant: 100),
+            
+            activityIndicator.centerXAnchor.constraint(equalTo: movieImageView.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: movieImageView.centerYAnchor),
             
             titleLabel.topAnchor.constraint(equalTo: movieImageView.topAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: movieImageView.trailingAnchor, constant: 10),
