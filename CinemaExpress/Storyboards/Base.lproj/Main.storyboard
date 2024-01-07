@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vvA-Ye-K5H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kSj-uO-cc3">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -37,7 +37,6 @@
                             <constraint firstItem="feY-qi-agv" firstAttribute="top" secondItem="GyI-SG-Zzc" secondAttribute="top" id="yUa-X8-jeh"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Избранное" image="star" catalog="system" id="GL8-q1-KTv"/>
                     <navigationItem key="navigationItem" title="🍿 Что посмотреть 🧐" id="RxA-Y7-VfD"/>
                     <connections>
                         <outlet property="favoruteTableView" destination="E2U-Pe-ZfB" id="bjL-kd-CSD"/>
@@ -46,23 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5m-Oz-Bxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2894" y="-1015"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="rUk-Pf-Thq">
-            <objects>
-                <navigationController id="vvA-Ye-K5H" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6fH-xW-7Ef">
-                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="kSj-uO-cc3" kind="relationship" relationship="rootViewController" id="Ma2-hF-iHI"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o1Z-kj-ByG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="734" y="-285"/>
+            <point key="canvasLocation" x="3792.5581395348836" y="-1015.236051502146"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Bgr-TT-KmS">
@@ -76,8 +59,8 @@
                         <color key="selectedImageTintColor" systemColor="systemYellowColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="r0P-IS-W33" kind="relationship" relationship="viewControllers" id="75F-4y-WGu"/>
-                        <segue destination="lLv-Gp-xuS" kind="relationship" relationship="viewControllers" id="fPK-IM-ie2"/>
+                        <segue destination="tzr-hm-qFN" kind="relationship" relationship="viewControllers" id="75F-4y-WGu"/>
+                        <segue destination="IRJ-vb-OWB" kind="relationship" relationship="viewControllers" id="fPK-IM-ie2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SNI-0x-kZ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -96,10 +79,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NMr-Zi-huK">
-                                <rect key="frame" x="30" y="123" width="370" height="493"/>
+                                <rect key="frame" x="30" y="123" width="370" height="444"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ZHh-7j-9f0">
+                                <rect key="frame" x="196.66666666666666" y="326.33333333333331" width="37" height="37"/>
+                                <color key="color" systemColor="systemYellowColor"/>
+                            </activityIndicatorView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="HlS-EB-rca">
-                                <rect key="frame" x="30" y="636" width="370" height="68"/>
+                                <rect key="frame" x="30" y="587" width="370" height="68"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название фильма" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0g-zf-3jT">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="25"/>
@@ -118,7 +105,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="yja-ia-rec">
-                                <rect key="frame" x="30" y="714" width="370" height="164"/>
+                                <rect key="frame" x="30" y="665" width="370" height="164"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
@@ -129,9 +116,11 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="xPv-qb-luj" secondAttribute="bottom" id="2nS-uZ-MYc"/>
                             <constraint firstItem="HlS-EB-rca" firstAttribute="leading" secondItem="Akw-IQ-RPf" secondAttribute="leading" constant="30" id="4Hh-Jg-FRS"/>
+                            <constraint firstItem="ZHh-7j-9f0" firstAttribute="centerX" secondItem="NMr-Zi-huK" secondAttribute="centerX" id="9YX-D3-Wkf"/>
                             <constraint firstItem="yja-ia-rec" firstAttribute="height" secondItem="1Nx-eF-ip6" secondAttribute="height" multiplier="0.176056" id="GSn-x0-Xwh"/>
                             <constraint firstItem="Akw-IQ-RPf" firstAttribute="trailing" secondItem="yja-ia-rec" secondAttribute="trailing" constant="30" id="GcQ-Kq-Xje"/>
                             <constraint firstItem="Akw-IQ-RPf" firstAttribute="bottom" secondItem="yja-ia-rec" secondAttribute="bottom" constant="20" id="IU7-06-HFh"/>
+                            <constraint firstItem="ZHh-7j-9f0" firstAttribute="centerY" secondItem="NMr-Zi-huK" secondAttribute="centerY" id="Kjp-9M-DVv"/>
                             <constraint firstItem="yja-ia-rec" firstAttribute="leading" secondItem="Akw-IQ-RPf" secondAttribute="leading" constant="30" id="Ld3-5x-mPI"/>
                             <constraint firstItem="yja-ia-rec" firstAttribute="top" secondItem="HlS-EB-rca" secondAttribute="bottom" constant="10" id="QRV-Kg-YdW"/>
                             <constraint firstItem="xPv-qb-luj" firstAttribute="trailing" secondItem="Akw-IQ-RPf" secondAttribute="trailing" id="RjW-15-AwK"/>
@@ -146,6 +135,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="pLe-He-H4r"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="ZHh-7j-9f0" id="c9K-jA-jQQ"/>
                         <outlet property="descriptionLabel" destination="yja-ia-rec" id="lkU-1V-9Cy"/>
                         <outlet property="filmNameLabel" destination="c0g-zf-3jT" id="LC0-xO-xVO"/>
                         <outlet property="genreLabel" destination="50m-3W-5cc" id="YCM-UR-Ybg"/>
@@ -154,9 +144,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckb-E7-bKF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4334" y="-285"/>
+            <point key="canvasLocation" x="5232.5581395348836" y="-285.19313304721032"/>
         </scene>
-        <!--🔎 Поиск фильмов 🔍-->
+        <!--🔎 Что посмотреть 🔍-->
         <scene sceneID="EqT-Uh-xlg">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="lLv-Gp-xuS" customClass="SearchViewController" customModule="CinemaExpress" customModuleProvider="target" sceneMemberID="viewController">
@@ -179,16 +169,6 @@
                                         <outlet property="delegate" destination="lLv-Gp-xuS" id="YT1-At-TR5"/>
                                     </connections>
                                 </searchBar>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Lgu-Pn-VGy">
-                                        <rect key="frame" x="0.0" y="94" width="330" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lgu-Pn-VGy" id="fEC-eg-21O">
-                                            <rect key="frame" x="0.0" y="0.0" width="330" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EP6-Bj-E7n"/>
@@ -204,8 +184,7 @@
                             <constraint firstItem="f56-HT-QmT" firstAttribute="leading" secondItem="EP6-Bj-E7n" secondAttribute="leading" constant="50" id="xQC-vt-R5m"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Поиск" image="magnifyingglass.circle" catalog="system" id="AiM-Et-So3"/>
-                    <navigationItem key="navigationItem" title="🔎 Поиск фильмов 🔍" id="YO7-tu-KEz">
+                    <navigationItem key="navigationItem" title="🔎 Что посмотреть 🔍" id="YO7-tu-KEz">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="fct-Tm-6Xn">
                             <color key="tintColor" systemColor="systemYellowColor"/>
                             <connections>
@@ -221,7 +200,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lpN-ie-jUe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2894" y="-285"/>
+            <point key="canvasLocation" x="3792.5581395348836" y="-285.19313304721032"/>
+        </scene>
+        <!--Поиск-->
+        <scene sceneID="fem-uc-2If">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IRJ-vb-OWB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Поиск" image="magnifyingglass.circle" catalog="system" id="AiM-Et-So3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gdx-vR-96M">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="20"/>
+                            <color key="textColor" systemColor="systemYellowColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lLv-Gp-xuS" kind="relationship" relationship="rootViewController" id="zhy-42-Dso"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sGF-uY-rvu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2893.953488372093" y="-285.19313304721032"/>
+        </scene>
+        <!--Избранное-->
+        <scene sceneID="bDd-yi-bsu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tzr-hm-qFN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Избранное" image="star" catalog="system" id="GL8-q1-KTv"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="khf-Ml-nxq">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="20"/>
+                            <color key="textColor" systemColor="systemYellowColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="r0P-IS-W33" kind="relationship" relationship="rootViewController" id="5BU-bu-DPf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pxo-zr-iOh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2893.953488372093" y="-1015.236051502146"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

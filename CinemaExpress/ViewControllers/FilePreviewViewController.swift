@@ -12,6 +12,7 @@ final class FilePreviewViewController: UIViewController {
     @IBOutlet weak var filmNameLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var movie: Movie!
     
@@ -31,13 +32,16 @@ final class FilePreviewViewController: UIViewController {
         
         if let image = movie.image {
             imageView.image = image
+            activityIndicator.stopAnimating()
         } else {
             if let movieImageUrl = movie.posterURL ,let imageUrl = URL(string: movieImageUrl) {
                 KinopoiskApi.shared.loadImage(from: imageUrl) { [self] image in
                     imageView.image = image
+                    activityIndicator.stopAnimating()
                 }
             } else {
                 imageView.image = UIImage(named: "noPoster")
+                activityIndicator.stopAnimating()
             }
         }
     }
