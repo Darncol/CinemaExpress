@@ -150,7 +150,6 @@ private extension MovieInfoCell {
     func setupActivityIndicator() {
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.hidesWhenStopped = true
-        activityIndicator.style = .large
         activityIndicator.color = .yellow
         activityIndicator.startAnimating()
     }
